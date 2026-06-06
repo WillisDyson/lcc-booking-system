@@ -1,5 +1,13 @@
+@use "../styles/variables" as *;
+
 .activity-booking-system {
-    background: var(--accent-bg);
+    background: var(--color-primary-accent);
+    border-radius: 15px;
     max-width: 1440px;
+    overflow: hidden;
     width: 100%;
+
+    @media (max-width: $wide-screen-breakpoint) {
+        border-radius: 0;
+    }
 }
