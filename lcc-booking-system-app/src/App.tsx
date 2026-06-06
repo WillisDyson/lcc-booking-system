@@ -4,15 +4,11 @@ import './App.module.scss'
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <main>
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-          </Routes>
-        </main>
-      </Router>
-    </div>
+    <Router>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+        </Routes>
+    </Router>
   );
 }
 

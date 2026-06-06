@@ -1,7 +1,10 @@
+import ActivityBookingSystem from "../components/ActivityBookingSystem";
 
 const Homepage = () => {
     return (
-        <main></main>
+        <main>
+            <ActivityBookingSystem />
+        </main>
     );
 };
 
