@@ -3,7 +3,7 @@
     display: flex !important;
     gap: 2px;
     height: 90px;
-    padding: 20px 16px !important;
+    padding: 20px 0 !important;
     position: static;
     max-width: 1248px;
 
@@ -13,23 +13,29 @@
     }
 
     :global {
-
         .swiper-button-next,
         .swiper-button-prev {
+            background-color: var(--color-white) !important;
             background-image: url('/src/assets/day-selector-carousel/day-selector-carousel-arrow.svg') !important;
             background-position: 50%;
             background-repeat: no-repeat;
+            border-radius: 7px;
             height: 48px;
             width: 48px;
         }
 
         .swiper-button-prev {
             left: 16px;
+            transform: rotate(180deg);
         }
 
         .swiper-button-next {
             right: 16px;
-            transform: rotate(180deg);
+        }
+
+        .swiper-button-disabled {
+            background-color: transparent !important;
+            background-image: url('/src/assets/day-selector-carousel/day-selector-carousel-arrow--disabled.svg') !important;
         }
     }
 }

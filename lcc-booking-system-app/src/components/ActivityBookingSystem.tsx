@@ -5,6 +5,7 @@ const ActivityBookingSystem = ({ }) => {
     return (
         <div className={styles["activity-booking-system"]}>
             <DaySelector />
+            {/* TODO: Create new search results grid component */}
         </div>
     );
 };
