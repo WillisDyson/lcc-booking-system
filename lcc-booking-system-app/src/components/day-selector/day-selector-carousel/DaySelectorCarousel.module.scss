@@ -1,7 +1,11 @@
 .day-selector-carousel {
     background-color: var(--color-primary-accent);
-    display: flex;
+    display: flex !important;
     gap: 2px;
     height: 90px;
-    padding: 20px 16px;
+    padding: 20px 16px !important;
+
+    &__slide {
+        display: flex !important;
+    }
 }
