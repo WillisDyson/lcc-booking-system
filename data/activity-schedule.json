@@ -1,0 +1,1366 @@
+{
+  "schedule": [
+    {
+      "date": "2025-02-02",
+      "dayOfWeek": "Monday",
+      "displayDate": "2nd February",
+      "totalActivities": 52,
+      "activities": [
+        {
+          "id": "mon-001",
+          "startTime": "07:00",
+          "endTime": "08:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 12,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-001"
+        },
+        {
+          "id": "mon-002",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "name": "Body Pump",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 3,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-002"
+        },
+        {
+          "id": "mon-003",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "name": "Hiit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 7,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-003"
+        },
+        {
+          "id": "mon-004",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 4,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-004"
+        },
+        {
+          "id": "mon-005",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-005"
+        },
+        {
+          "id": "mon-006",
+          "startTime": "13:00",
+          "endTime": "14:00",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/mon-006"
+        },
+        {
+          "id": "mon-007",
+          "startTime": "14:00",
+          "endTime": "15:00",
+          "name": "Circuits",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 8,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-007"
+        },
+        {
+          "id": "mon-008",
+          "startTime": "15:00",
+          "endTime": "16:00",
+          "name": "DanceFit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-008"
+        },
+        {
+          "id": "mon-009",
+          "startTime": "16:00",
+          "endTime": "17:00",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-009"
+        },
+        {
+          "id": "mon-010",
+          "startTime": "17:00",
+          "endTime": "18:00",
+          "name": "Studio Aerobics",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-010"
+        },
+        {
+          "id": "mon-011",
+          "startTime": "18:00",
+          "endTime": "19:00",
+          "name": "Studio Cycling",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/mon-011"
+        },
+        {
+          "id": "mon-012",
+          "startTime": "19:00",
+          "endTime": "20:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Lane Swim",
+          "spaces": 1,
+          "status": "available",
+          "link": "https://www.example.com/book/mon-012"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-03",
+      "dayOfWeek": "Tuesday",
+      "displayDate": "3rd February",
+      "totalActivities": 48,
+      "activities": [
+        {
+          "id": "tue-001",
+          "startTime": "06:30",
+          "endTime": "07:30",
+          "name": "Early Morning Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 14,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-001"
+        },
+        {
+          "id": "tue-002",
+          "startTime": "08:00",
+          "endTime": "09:00",
+          "name": "Spin Class",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 2,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-002"
+        },
+        {
+          "id": "tue-003",
+          "startTime": "09:30",
+          "endTime": "10:30",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 6,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-003"
+        },
+        {
+          "id": "tue-004",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/tue-004"
+        },
+        {
+          "id": "tue-005",
+          "startTime": "11:30",
+          "endTime": "12:30",
+          "name": "Body Pump",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 5,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-005"
+        },
+        {
+          "id": "tue-006",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-006"
+        },
+        {
+          "id": "tue-007",
+          "startTime": "13:30",
+          "endTime": "14:30",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 8,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-007"
+        },
+        {
+          "id": "tue-008",
+          "startTime": "15:00",
+          "endTime": "16:00",
+          "name": "Hiit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 3,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-008"
+        },
+        {
+          "id": "tue-009",
+          "startTime": "16:30",
+          "endTime": "17:30",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 12,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-009"
+        },
+        {
+          "id": "tue-010",
+          "startTime": "17:00",
+          "endTime": "18:00",
+          "name": "Circuits",
+          "location": "Sports Hall",
+          "type": "Fitness",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/tue-010"
+        },
+        {
+          "id": "tue-011",
+          "startTime": "18:30",
+          "endTime": "19:30",
+          "name": "Studio Cycling",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 7,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-011"
+        },
+        {
+          "id": "tue-012",
+          "startTime": "20:00",
+          "endTime": "21:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Lane Swim",
+          "spaces": 16,
+          "status": "available",
+          "link": "https://www.example.com/book/tue-012"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-04",
+      "dayOfWeek": "Wednesday",
+      "displayDate": "4th February",
+      "totalActivities": 45,
+      "activities": [
+        {
+          "id": "wed-001",
+          "startTime": "07:00",
+          "endTime": "08:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Lane Swim",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-001"
+        },
+        {
+          "id": "wed-002",
+          "startTime": "08:30",
+          "endTime": "09:30",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/wed-002"
+        },
+        {
+          "id": "wed-003",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 4,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-003"
+        },
+        {
+          "id": "wed-004",
+          "startTime": "10:30",
+          "endTime": "11:30",
+          "name": "Body Balance",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 9,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-004"
+        },
+        {
+          "id": "wed-005",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "name": "Body Pump",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 6,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-005"
+        },
+        {
+          "id": "wed-006",
+          "startTime": "12:30",
+          "endTime": "13:30",
+          "name": "DanceFit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 15,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-006"
+        },
+        {
+          "id": "wed-007",
+          "startTime": "14:00",
+          "endTime": "15:00",
+          "name": "Hiit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 2,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-007"
+        },
+        {
+          "id": "wed-008",
+          "startTime": "15:30",
+          "endTime": "16:30",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 11,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-008"
+        },
+        {
+          "id": "wed-009",
+          "startTime": "16:00",
+          "endTime": "17:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 8,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-009"
+        },
+        {
+          "id": "wed-010",
+          "startTime": "17:30",
+          "endTime": "18:30",
+          "name": "Studio Aerobics",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/wed-010"
+        },
+        {
+          "id": "wed-011",
+          "startTime": "18:00",
+          "endTime": "19:00",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 5,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-011"
+        },
+        {
+          "id": "wed-012",
+          "startTime": "19:30",
+          "endTime": "20:30",
+          "name": "Studio Cycling",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 1,
+          "status": "available",
+          "link": "https://www.example.com/book/wed-012"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-05",
+      "dayOfWeek": "Thursday",
+      "displayDate": "5th February",
+      "totalActivities": 50,
+      "activities": [
+        {
+          "id": "thu-001",
+          "startTime": "07:00",
+          "endTime": "08:00",
+          "name": "Early Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 12,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-001"
+        },
+        {
+          "id": "thu-002",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "name": "Circuits",
+          "location": "Sports Hall",
+          "type": "Fitness",
+          "spaces": 7,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-002"
+        },
+        {
+          "id": "thu-003",
+          "startTime": "09:30",
+          "endTime": "10:30",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/thu-003"
+        },
+        {
+          "id": "thu-004",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "name": "Body Balance",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 3,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-004"
+        },
+        {
+          "id": "thu-005",
+          "startTime": "11:30",
+          "endTime": "12:30",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 9,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-005"
+        },
+        {
+          "id": "thu-006",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "name": "Body Pump",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 4,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-006"
+        },
+        {
+          "id": "thu-007",
+          "startTime": "13:30",
+          "endTime": "14:30",
+          "name": "Hiit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 6,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-007"
+        },
+        {
+          "id": "thu-008",
+          "startTime": "15:00",
+          "endTime": "16:00",
+          "name": "DanceFit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 14,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-008"
+        },
+        {
+          "id": "thu-009",
+          "startTime": "16:00",
+          "endTime": "17:00",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/thu-009"
+        },
+        {
+          "id": "thu-010",
+          "startTime": "17:30",
+          "endTime": "18:30",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 8,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-010"
+        },
+        {
+          "id": "thu-011",
+          "startTime": "18:00",
+          "endTime": "19:00",
+          "name": "Studio Cycling",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 2,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-011"
+        },
+        {
+          "id": "thu-012",
+          "startTime": "19:30",
+          "endTime": "20:30",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Lane Swim",
+          "spaces": 20,
+          "status": "available",
+          "link": "https://www.example.com/book/thu-012"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-06",
+      "dayOfWeek": "Friday",
+      "displayDate": "6th February",
+      "totalActivities": 44,
+      "activities": [
+        {
+          "id": "fri-001",
+          "startTime": "07:00",
+          "endTime": "08:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 15,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-001"
+        },
+        {
+          "id": "fri-002",
+          "startTime": "08:30",
+          "endTime": "09:30",
+          "name": "Body Pump",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 5,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-002"
+        },
+        {
+          "id": "fri-003",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/fri-003"
+        },
+        {
+          "id": "fri-004",
+          "startTime": "10:30",
+          "endTime": "11:30",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 7,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-004"
+        },
+        {
+          "id": "fri-005",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "name": "Hiit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 1,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-005"
+        },
+        {
+          "id": "fri-006",
+          "startTime": "12:30",
+          "endTime": "13:30",
+          "name": "Circuits",
+          "location": "Sports Hall",
+          "type": "Fitness",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-006"
+        },
+        {
+          "id": "fri-007",
+          "startTime": "13:00",
+          "endTime": "14:00",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 6,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-007"
+        },
+        {
+          "id": "fri-008",
+          "startTime": "15:00",
+          "endTime": "16:00",
+          "name": "DanceFit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 12,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-008"
+        },
+        {
+          "id": "fri-009",
+          "startTime": "16:30",
+          "endTime": "17:30",
+          "name": "Studio Aerobics",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/fri-009"
+        },
+        {
+          "id": "fri-010",
+          "startTime": "17:00",
+          "endTime": "18:00",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 9,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-010"
+        },
+        {
+          "id": "fri-011",
+          "startTime": "18:30",
+          "endTime": "19:30",
+          "name": "Studio Cycling",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 3,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-011"
+        },
+        {
+          "id": "fri-012",
+          "startTime": "20:00",
+          "endTime": "21:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Lane Swim",
+          "spaces": 18,
+          "status": "available",
+          "link": "https://www.example.com/book/fri-012"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-07",
+      "dayOfWeek": "Saturday",
+      "displayDate": "7th February",
+      "totalActivities": 38,
+      "activities": [
+        {
+          "id": "sat-001",
+          "startTime": "08:00",
+          "endTime": "09:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 20,
+          "status": "available",
+          "link": "https://www.example.com/book/sat-001"
+        },
+        {
+          "id": "sat-002",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "name": "Body Pump",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 8,
+          "status": "available",
+          "link": "https://www.example.com/book/sat-002"
+        },
+        {
+          "id": "sat-003",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/sat-003"
+        },
+        {
+          "id": "sat-004",
+          "startTime": "10:30",
+          "endTime": "11:30",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 5,
+          "status": "available",
+          "link": "https://www.example.com/book/sat-004"
+        },
+        {
+          "id": "sat-005",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "name": "DanceFit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/sat-005"
+        },
+        {
+          "id": "sat-006",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "name": "Hiit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 4,
+          "status": "available",
+          "link": "https://www.example.com/book/sat-006"
+        },
+        {
+          "id": "sat-007",
+          "startTime": "13:30",
+          "endTime": "14:30",
+          "name": "Circuits",
+          "location": "Sports Hall",
+          "type": "Fitness",
+          "spaces": 6,
+          "status": "available",
+          "link": "https://www.example.com/book/sat-007"
+        },
+        {
+          "id": "sat-008",
+          "startTime": "14:00",
+          "endTime": "15:00",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/sat-008"
+        },
+        {
+          "id": "sat-009",
+          "startTime": "15:30",
+          "endTime": "16:30",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 7,
+          "status": "available",
+          "link": "https://www.example.com/book/sat-009"
+        },
+        {
+          "id": "sat-010",
+          "startTime": "16:00",
+          "endTime": "17:00",
+          "name": "Studio Cycling",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 2,
+          "status": "available",
+          "link": "https://www.example.com/book/sat-010"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-08",
+      "dayOfWeek": "Sunday",
+      "displayDate": "8th February",
+      "totalActivities": 30,
+      "activities": [
+        {
+          "id": "sun-001",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 22,
+          "status": "available",
+          "link": "https://www.example.com/book/sun-001"
+        },
+        {
+          "id": "sun-002",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 9,
+          "status": "available",
+          "link": "https://www.example.com/book/sun-002"
+        },
+        {
+          "id": "sun-003",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "name": "Body Balance",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/sun-003"
+        },
+        {
+          "id": "sun-004",
+          "startTime": "11:30",
+          "endTime": "12:30",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 6,
+          "status": "available",
+          "link": "https://www.example.com/book/sun-004"
+        },
+        {
+          "id": "sun-005",
+          "startTime": "13:00",
+          "endTime": "14:00",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 11,
+          "status": "available",
+          "link": "https://www.example.com/book/sun-005"
+        },
+        {
+          "id": "sun-006",
+          "startTime": "14:30",
+          "endTime": "15:30",
+          "name": "DanceFit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 8,
+          "status": "available",
+          "link": "https://www.example.com/book/sun-006"
+        },
+        {
+          "id": "sun-007",
+          "startTime": "15:00",
+          "endTime": "16:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Lane Swim",
+          "spaces": 15,
+          "status": "available",
+          "link": "https://www.example.com/book/sun-007"
+        },
+        {
+          "id": "sun-008",
+          "startTime": "16:30",
+          "endTime": "17:30",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 5,
+          "status": "available",
+          "link": "https://www.example.com/book/sun-008"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-09",
+      "dayOfWeek": "Monday",
+      "displayDate": "9th February",
+      "totalActivities": 53,
+      "activities": [
+        {
+          "id": "mon2-001",
+          "startTime": "07:00",
+          "endTime": "08:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-001"
+        },
+        {
+          "id": "mon2-002",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "name": "Body Pump",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/mon2-002"
+        },
+        {
+          "id": "mon2-003",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "name": "Hiit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 5,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-003"
+        },
+        {
+          "id": "mon2-004",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 7,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-004"
+        },
+        {
+          "id": "mon2-005",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 12,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-005"
+        },
+        {
+          "id": "mon2-006",
+          "startTime": "13:00",
+          "endTime": "14:00",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 3,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-006"
+        },
+        {
+          "id": "mon2-007",
+          "startTime": "14:00",
+          "endTime": "15:00",
+          "name": "Circuits",
+          "location": "Sports Hall",
+          "type": "Fitness",
+          "spaces": 6,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-007"
+        },
+        {
+          "id": "mon2-008",
+          "startTime": "15:00",
+          "endTime": "16:00",
+          "name": "DanceFit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/mon2-008"
+        },
+        {
+          "id": "mon2-009",
+          "startTime": "16:00",
+          "endTime": "17:00",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 9,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-009"
+        },
+        {
+          "id": "mon2-010",
+          "startTime": "17:00",
+          "endTime": "18:00",
+          "name": "Studio Aerobics",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 8,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-010"
+        },
+        {
+          "id": "mon2-011",
+          "startTime": "18:00",
+          "endTime": "19:00",
+          "name": "Studio Cycling",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 1,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-011"
+        },
+        {
+          "id": "mon2-012",
+          "startTime": "19:00",
+          "endTime": "20:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Lane Swim",
+          "spaces": 14,
+          "status": "available",
+          "link": "https://www.example.com/book/mon2-012"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-10",
+      "dayOfWeek": "Tuesday",
+      "displayDate": "10th February",
+      "totalActivities": 47,
+      "activities": [
+        {
+          "id": "tue2-001",
+          "startTime": "06:30",
+          "endTime": "07:30",
+          "name": "Early Morning Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 18,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-001"
+        },
+        {
+          "id": "tue2-002",
+          "startTime": "08:00",
+          "endTime": "09:00",
+          "name": "Spin Class",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 4,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-002"
+        },
+        {
+          "id": "tue2-003",
+          "startTime": "09:30",
+          "endTime": "10:30",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/tue2-003"
+        },
+        {
+          "id": "tue2-004",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 6,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-004"
+        },
+        {
+          "id": "tue2-005",
+          "startTime": "11:30",
+          "endTime": "12:30",
+          "name": "Body Pump",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 2,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-005"
+        },
+        {
+          "id": "tue2-006",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 12,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-006"
+        },
+        {
+          "id": "tue2-007",
+          "startTime": "13:30",
+          "endTime": "14:30",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-007"
+        },
+        {
+          "id": "tue2-008",
+          "startTime": "15:00",
+          "endTime": "16:00",
+          "name": "Hiit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/tue2-008"
+        },
+        {
+          "id": "tue2-009",
+          "startTime": "16:30",
+          "endTime": "17:30",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 7,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-009"
+        },
+        {
+          "id": "tue2-010",
+          "startTime": "17:00",
+          "endTime": "18:00",
+          "name": "Circuits",
+          "location": "Sports Hall",
+          "type": "Fitness",
+          "spaces": 5,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-010"
+        },
+        {
+          "id": "tue2-011",
+          "startTime": "18:30",
+          "endTime": "19:30",
+          "name": "Studio Cycling",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 9,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-011"
+        },
+        {
+          "id": "tue2-012",
+          "startTime": "20:00",
+          "endTime": "21:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Lane Swim",
+          "spaces": 20,
+          "status": "available",
+          "link": "https://www.example.com/book/tue2-012"
+        }
+      ]
+    },
+    {
+      "date": "2025-02-11",
+      "dayOfWeek": "Wednesday",
+      "displayDate": "11th February",
+      "totalActivities": 46,
+      "activities": [
+        {
+          "id": "wed2-001",
+          "startTime": "07:00",
+          "endTime": "08:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Lane Swim",
+          "spaces": 16,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-001"
+        },
+        {
+          "id": "wed2-002",
+          "startTime": "08:30",
+          "endTime": "09:30",
+          "name": "Yoga",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 6,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-002"
+        },
+        {
+          "id": "wed2-003",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "name": "Aqua Aerobics",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/wed2-003"
+        },
+        {
+          "id": "wed2-004",
+          "startTime": "10:30",
+          "endTime": "11:30",
+          "name": "Body Balance",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 8,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-004"
+        },
+        {
+          "id": "wed2-005",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "name": "Body Pump",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 4,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-005"
+        },
+        {
+          "id": "wed2-006",
+          "startTime": "12:30",
+          "endTime": "13:30",
+          "name": "DanceFit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 13,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-006"
+        },
+        {
+          "id": "wed2-007",
+          "startTime": "14:00",
+          "endTime": "15:00",
+          "name": "Hiit",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 0,
+          "status": "fully_booked",
+          "link": "https://www.example.com/book/wed2-007"
+        },
+        {
+          "id": "wed2-008",
+          "startTime": "15:30",
+          "endTime": "16:30",
+          "name": "Pilates",
+          "location": "Studio",
+          "type": "Health programmes",
+          "spaces": 5,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-008"
+        },
+        {
+          "id": "wed2-009",
+          "startTime": "16:00",
+          "endTime": "17:00",
+          "name": "Lane Swim",
+          "location": "Pool 1",
+          "type": "Swim",
+          "spaces": 10,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-009"
+        },
+        {
+          "id": "wed2-010",
+          "startTime": "17:30",
+          "endTime": "18:30",
+          "name": "Studio Aerobics",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 3,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-010"
+        },
+        {
+          "id": "wed2-011",
+          "startTime": "18:00",
+          "endTime": "19:00",
+          "name": "Zumba",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 7,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-011"
+        },
+        {
+          "id": "wed2-012",
+          "startTime": "19:30",
+          "endTime": "20:30",
+          "name": "Studio Cycling",
+          "location": "Studio",
+          "type": "Fitness",
+          "spaces": 1,
+          "status": "available",
+          "link": "https://www.example.com/book/wed2-012"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "activityTypes": [
+      "Fitness",
+      "Swim",
+      "Health programmes",
+      "Lane Swim"
+    ],
+    "locations": [
+      "Pool 1",
+      "Studio",
+      "Sports Hall"
+    ],
+    "statuses": {
+      "available": "Spaces remaining \u2014 bookable",
+      "fully_booked": "No spaces remaining"
+    },
+    "fields": {
+      "id": "Unique identifier for the activity slot",
+      "startTime": "Activity start time in HH:MM format (24hr)",
+      "endTime": "Activity end time in HH:MM format (24hr)",
+      "name": "Display name of the activity",
+      "location": "Venue/room where the activity takes place",
+      "type": "Activity category",
+      "spaces": "Number of spaces remaining (0 = fully booked)",
+      "status": "Booking availability: 'available' or 'fully_booked'",
+      "link": "Booking URL for the activity"
+    }
+  }
+}
