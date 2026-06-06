@@ -5,7 +5,7 @@ const DaySelector = ({ }) => {
     return (
         <div className={styles["day-selector"]}>
             <DaySelectorCarousel />
-            <span>[X] activities showing for [displayDate]</span>
+            <span className={styles["day-selector__info"]}>[X] activities showing for [displayDate]</span>
         </div>
     );
 };
