@@ -1,5 +1,9 @@
 .day-selector {
-    color: red;
+    position: relative;
+
+    &__inner {
+        position: relative;
+    }
 
     &__info {
         background-color: var(--color-secondary-accent);

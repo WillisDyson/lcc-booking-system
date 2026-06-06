@@ -15,7 +15,10 @@ const DaySelectorCarousel = ({ }) => {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={0}
             slidesPerView={1}
-            navigation>
+            navigation={{
+                addIcons: false
+            }}
+            speed={1000}>
                 {/* TODO: Add dynamic looping to generate slides */}
             <SwiperSlide className={styles["day-selector-carousel__slide"]}>
                 <DaySelectorCarouselItem active />

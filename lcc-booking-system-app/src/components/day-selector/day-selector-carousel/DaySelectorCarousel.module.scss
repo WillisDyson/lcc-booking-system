@@ -4,8 +4,32 @@
     gap: 2px;
     height: 90px;
     padding: 20px 16px !important;
+    position: static;
+    max-width: 1248px;
 
     &__slide {
         display: flex !important;
+        position: static;
+    }
+
+    :global {
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-image: url('/src/assets/day-selector-carousel/day-selector-carousel-arrow.svg') !important;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            height: 48px;
+            width: 48px;
+        }
+
+        .swiper-button-prev {
+            left: 16px;
+        }
+
+        .swiper-button-next {
+            right: 16px;
+            transform: rotate(180deg);
+        }
     }
 }
