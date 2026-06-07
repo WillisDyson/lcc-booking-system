@@ -1,3 +1,31 @@
 .dropdown-select {
-    position: relative;
+    color: var(--color-black);
+    display: inline-block;
+
+    &__button {
+        align-items: center;
+        box-shadow: 0 0 0 1px #000;
+        border-radius: 4px;
+        display: flex;
+        font-size: 1rem;
+        font-weight: 700;
+        gap: 10px;
+        height: 32px;
+        padding: 0 16px;
+        width: 100%;
+    }
+
+    &__arrow {
+        background-image: url('/src/assets/dropdown-select/dropdown-select-arrow.svg');
+        background-position: 50%;
+        height: 8px;
+        margin-left: auto;
+        width: 13px;
+    }
+
+    &__content {
+        background-color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+    }
 }

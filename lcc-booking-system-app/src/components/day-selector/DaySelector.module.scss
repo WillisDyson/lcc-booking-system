@@ -2,6 +2,7 @@
     position: relative;
 
     &__inner {
+        background-color: var(--color-primary-accent);
         position: relative;
     }
 
@@ -11,7 +12,6 @@
         display: flex;
         font-size: 1.125rem;
         font-weight: 700;
-        letter-spacing: var(--spacing-normal);
         padding: 14px 24px;
     }
 }
