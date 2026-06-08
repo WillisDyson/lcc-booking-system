@@ -1,5 +1,5 @@
-import SearchResultsGrid from "./search-results-grid/SearchResultsGrid";
 import DropdownSelect from "../generic/dropdown-select/DropdownSelect";
+import SearchResultsTile from "./search-results-tile/SearchResultsTile";
 import styles from "./SearchResults.module.scss";
 
 const SearchResults = ({ }) => {
@@ -9,7 +9,16 @@ const SearchResults = ({ }) => {
                 <DropdownSelect dropdownText="Select an activity type" />
                 <DropdownSelect dropdownText="Select a location" />
             </div>
-            <SearchResultsGrid /> 
+            <div className={styles["search-results__grid"]}>
+                <SearchResultsTile />
+                <SearchResultsTile />
+                <SearchResultsTile />
+                <SearchResultsTile />
+                <SearchResultsTile />
+                <SearchResultsTile />
+                <SearchResultsTile />
+                <SearchResultsTile />
+            </div>
         </div>
     );
 };

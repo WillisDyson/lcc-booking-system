@@ -14,10 +14,10 @@
 
     &--active {
         background-color: var(--color-white);
-        color: var(--color-primary-accent);
+        color: var(--color-accent-primary);
 
         #{$self}__day {
-            border-color: var(--color-primary-accent);
+            border-color: var(--color-accent-primary);
         }
 
         &:hover {

@@ -4,9 +4,14 @@
   // Colours
   --color-black: #000;
   --color-white: #fff;
-  --color-primary-accent: #114490;
-  --color-secondary-accent: #E7ECF4;
-  --color-tertiary-accent: #163278;
+
+  --color-text-primary: #2b2b2b;
+
+  --color-accent-primary: #114490;
+  --color-accent-secondary: #E7ECF4;
+  --color-accent-tertiary: #F9FAFB;
+  --color-available: #D1F9F3;
+  --color-fully-booked: #F9D1D2;
 
   --font-primary: 'Nunito Sans', 'Open Sans', Arial, sans-serif;
   --font-secondary: 'Open Sans', Arial, sans-serif;
@@ -19,19 +24,4 @@
   font-family: var(--font-primary);
   color: var(--color-black);
   letter-spacing: var(--spacing-normal);
-}
-
-body {
-  margin: 0;
-}
-
-h1, h2 {
-  margin: 0;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font: inherit;
 }

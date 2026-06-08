@@ -1,0 +1,64 @@
+.search-results-tile {
+    background-color: var(--color-accent-tertiary);
+    border-radius: 6px;
+    color: var(--color-text-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    transition: var(--transition-speed);
+    padding: 16px;
+
+    &:hover {
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__details {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+    }
+
+    &__time {
+        align-items: center;
+        display: flex;
+        font-size: 1rem;
+        gap: 8px;
+    }
+
+    &__spaces {
+        align-items: center;
+        background-color: var(--color-available);
+        border-radius: 6px;
+        display: flex;
+        font-size: 0.875rem;
+        height: 27px;
+        margin-left: auto;
+        padding: 0 4px;
+
+        &--fully-booked {
+            background-color: var(--color-fully-booked);
+        }
+    }
+
+    &__title {
+        font-size: 1.188rem;
+        font-weight: 700;
+    }
+
+    &__main-info {
+        font-size: 0.875rem;
+        text-align: left;
+        
+        tbody {
+            display: flex;
+            gap: 9px;
+            flex-direction: column;
+        }
+        
+        tr {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 110px auto;
+        }
+    }
+}

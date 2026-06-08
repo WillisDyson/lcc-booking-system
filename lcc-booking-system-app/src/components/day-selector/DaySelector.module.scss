@@ -2,13 +2,13 @@
     position: relative;
 
     &__inner {
-        background-color: var(--color-primary-accent);
+        background-color: var(--color-accent-primary);
         position: relative;
     }
 
     &__info {
-        background-color: var(--color-secondary-accent);
-        color: var(--color-primary-accent);
+        background-color: var(--color-accent-secondary);
+        color: var(--color-accent-primary);
         display: flex;
         font-size: 1.125rem;
         font-weight: 700;
