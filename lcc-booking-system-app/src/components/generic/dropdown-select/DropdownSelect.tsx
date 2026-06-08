@@ -40,7 +40,7 @@ const DropdownSelect = ({ dropdownText }: { dropdownText: string }) => {
             <fieldset
                 id={panelId}
                 className={`${styles["dropdown-select__content"]} `}
-                onMouseDown={(e) => e.preDefault()} // Pres the dropdown from closing when on a <label> or on space between options
+                onMouseDown={(e) => e.preventDefault()} // Pres the dropdown from closing when on a <label> or on space between options
             >
                 <label className={styles["dropdown-select__option"]}>
                     <input className={styles["dropdown-select__checkbox"]}type="checkbox" name="Filter" value="Swim"/>

@@ -18,6 +18,10 @@ const SearchResults = ({ }) => {
                 <SearchResultsTile />
                 <SearchResultsTile />
                 <SearchResultsTile />
+                <SearchResultsTile />
+                <SearchResultsTile />
+                <SearchResultsTile />
+                <SearchResultsTile />
             </div>
         </div>
     );

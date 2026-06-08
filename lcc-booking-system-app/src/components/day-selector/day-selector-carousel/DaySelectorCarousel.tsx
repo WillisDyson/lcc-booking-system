@@ -8,7 +8,12 @@ import 'swiper/css/scrollbar';
 import DaySelectorCarouselItem from "./day-selector-carousel-item/DaySelectorCarouselItem";
 import styles from "./DaySelectorCarousel.module.scss";
 
-const DaySelectorCarousel = ({ }) => {
+const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string; dayOfWeek: string; displayDate: string }[] }) => {
+    const slides = Array.from(
+        { length: Math.ceil(availableDays.length / 7) },
+        (_, index) => availableDays.slice(index * 7, index * 7 + 7),
+    );
+
     return (
         <Swiper
         className={styles["day-selector-carousel"]}
@@ -19,25 +24,18 @@ const DaySelectorCarousel = ({ }) => {
                 addIcons: false
             }}
             speed={1000}>
-                {/* TODO: Add dynamic looping to generate slides */}
-            <SwiperSlide className={styles["day-selector-carousel__slide"]}>
-                <DaySelectorCarouselItem active />
-                <DaySelectorCarouselItem/>
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-            </SwiperSlide>
-            <SwiperSlide className={styles["day-selector-carousel__slide"]}>
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-                <DaySelectorCarouselItem />
-            </SwiperSlide>
+            {slides.map((slideDays, slideIndex) => (
+                <SwiperSlide className={styles["day-selector-carousel__slide"]} key={`slide-${slideIndex}`}>
+                    {slideDays.map((day, dayIndex) => (
+                        <DaySelectorCarouselItem
+                            key={day.date}
+                            active={slideIndex === 0 && dayIndex === 0}
+                            day={day.dayOfWeek}
+                            date={day.displayDate}
+                        />
+                    ))}
+                </SwiperSlide>
+            ))}
         </Swiper>
     );
 };

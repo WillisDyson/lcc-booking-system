@@ -8,7 +8,9 @@
 
     &__slide {
         display: flex !important;
+        justify-content: space-between;
         position: static;
+        width: 100%;
     }
 
     :global {
