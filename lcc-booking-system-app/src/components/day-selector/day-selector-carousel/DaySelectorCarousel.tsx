@@ -7,11 +7,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import DaySelectorCarouselItem from "./day-selector-carousel-item/DaySelectorCarouselItem";
 import styles from "./DaySelectorCarousel.module.scss";
-import { useSelectedDay } from "../../../context/SelectedDayContext";
+import { useActivitySearchFilters } from "../../../context/ActivitySearchFiltersContext";
 
 const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string; dayOfWeek: string; displayDate: string; totalActivities: number }[] }) => {
     const daysPerSlide = 7;
-    const { selectedDay, setSelectedDay } = useSelectedDay();
+    const { selectedDay, setSelectedDay } = useActivitySearchFilters();
 
     return (
         <Swiper

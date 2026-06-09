@@ -3,7 +3,7 @@ import SearchResults from "./search-results/SearchResults";
 import styles from "./ActivityBookingSystem.module.scss";
 import activityScheduleData from "../../data/activity-schedule.json";
 import { useEffect } from "react";
-import { useSelectedDay } from "../context/SelectedDayContext";
+import { useActivitySearchFilters } from "../context/ActivitySearchFiltersContext";
 
 type ScheduleDay = {
     date: string;
@@ -13,7 +13,7 @@ type ScheduleDay = {
 };
 
 const ActivityBookingSystem = ({}) => {
-    const { selectedDay, setSelectedDay } = useSelectedDay();
+    const { selectedDay, setSelectedDay } = useActivitySearchFilters();
 
     const schedule = Array.isArray(activityScheduleData?.schedule)
         ? activityScheduleData.schedule

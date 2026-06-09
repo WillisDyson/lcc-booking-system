@@ -1,6 +1,6 @@
 import styles from "./DaySelector.module.scss";
 import DaySelectorCarousel from "./day-selector-carousel/DaySelectorCarousel";
-import { useSelectedDay } from "../../context/SelectedDayContext";
+import { useActivitySearchFilters } from "../../context/ActivitySearchFiltersContext";
 
 type AvailableDay = {
     date: string;
@@ -10,7 +10,7 @@ type AvailableDay = {
 };
 
 const DaySelector = ({ availableDays }: { availableDays: AvailableDay[] }) => {
-    const { selectedDay } = useSelectedDay();
+    const { selectedDay } = useActivitySearchFilters();
 
     return (
         <section className={styles["day-selector"]}>

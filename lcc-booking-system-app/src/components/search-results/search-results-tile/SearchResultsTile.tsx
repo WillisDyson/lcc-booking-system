@@ -2,29 +2,56 @@ import { Link } from "react-router-dom";
 import styles from "./SearchResultsTile.module.scss";
 import timeIcon from "/src/assets/search-results-tile/time-icon.svg";
 
-const SearchResultsTile = ({ }) => {
-    return (
-        <Link to="/activity/1" className={styles["search-results-tile"]}>
+type SearchResultsTileProps = {
+    activity: {
+        id: string;
+        startTime: string;
+        endTime: string;
+        name: string;
+        location: string;
+        type: string;
+        spaces: number;
+    };
+};
+
+const SearchResultsTile = ({ activity }: SearchResultsTileProps) => {
+    const isFullyBooked = activity.spaces <= 0;;
+    const tileContent = (
+        <>
             <div className={styles["search-results-tile__details"]}>
                 <div className={styles["search-results-tile__time"]}>
                     <img src={timeIcon} alt="Time" className={styles["search-results-tile__time-icon"]} />
-                    07:00 - 08:00
+                    {activity.startTime} - {activity.endTime}
                 </div>
-                <span className={styles["search-results-tile__spaces"]}>12 spaces</span>
+                <span
+                    className={`${styles["search-results-tile__spaces"]}`}
+                >
+                    {isFullyBooked ? "Fully booked" : `${activity.spaces} spaces`}
+                </span>
             </div>
-            <h3 className={styles["search-results-tile__title"]}>Lane Swim</h3>
+            <h3 className={styles["search-results-tile__title"]}>{activity.name}</h3>
             <table className={styles["search-results-tile__main-info"]}>
                 <tbody>
                     <tr>
                         <th>Location</th>
-                        <td>Pool 1</td>
+                        <td>{activity.location}</td>
                     </tr>
                     <tr>
                         <th>Type</th>
-                        <td>Swim</td>
+                        <td>{activity.type}</td>
                     </tr>
                 </tbody>
             </table>
+        </>
+    );
+
+    if (isFullyBooked) {
+        return <div className={`${styles["search-results-tile"]} ${styles["search-results-tile--fully-booked"]}`}>{tileContent}</div>;
+    }
+
+    return (
+        <Link to={`/activity/${activity.id}`} className={styles["search-results-tile"]}>
+            {tileContent}
         </Link>
     );
 };
