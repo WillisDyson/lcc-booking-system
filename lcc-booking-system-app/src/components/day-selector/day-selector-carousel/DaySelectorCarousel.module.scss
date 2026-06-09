@@ -1,6 +1,5 @@
 .day-selector-carousel {
     display: flex !important;
-    gap: 2px;
     height: 90px;
     padding: 20px 0 !important;
     position: static;
@@ -8,9 +7,10 @@
 
     &__slide {
         display: flex !important;
-        justify-content: space-between;
+        justify-content: flex-start;
+        gap: 2px;
         position: static;
-        width: 100%;
+        width: fit-content;
     }
 
     :global {

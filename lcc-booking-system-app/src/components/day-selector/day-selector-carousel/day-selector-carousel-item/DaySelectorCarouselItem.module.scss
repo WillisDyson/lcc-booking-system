@@ -7,8 +7,9 @@
     color: var(--color-white);
     display: flex;
     justify-content: center;
-    padding: 16px 12px;
+    padding: 12px 15.5px;
     transition: var(--transition-speed);
+    max-width: fit-content;
     user-select: none;
     width: 100%;
 

@@ -8,6 +8,12 @@
     overflow: hidden;
     width: 100%;
 
+    &__error-message {
+        font-size: 1.2rem;
+        padding: 20px;
+        text-align: center;
+    }
+
     @media (max-width: $wide-screen-breakpoint) {
         border-radius: 0;
     }
