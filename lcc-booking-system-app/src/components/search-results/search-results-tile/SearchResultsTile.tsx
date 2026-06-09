@@ -46,13 +46,15 @@ const SearchResultsTile = ({ activity }: SearchResultsTileProps) => {
     );
 
     if (isFullyBooked) {
-        return <div className={`${styles["search-results-tile"]} ${styles["search-results-tile--fully-booked"]}`}>{tileContent}</div>;
+        return <div className={styles["search-results-tile"] + " " + styles["search-results-tile--fully-booked"]}>{tileContent}</div>;
     }
 
     return (
-        <Link to={`/activity/${activity.id}`} className={styles["search-results-tile"]}>
-            {tileContent}
-        </Link>
+        <li>
+            <Link to={`/activity/${activity.id}`} className={styles["search-results-tile"]}>
+                {tileContent}
+            </Link>
+        </li>
     );
 };
 

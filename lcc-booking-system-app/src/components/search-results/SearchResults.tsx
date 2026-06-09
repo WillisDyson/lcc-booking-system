@@ -97,15 +97,15 @@ const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
                     onClearValues={clearSelectedLocations}
                 />
             </div>
-            <div className={styles["search-results__grid"]}>
+            <ul className={styles["search-results__grid"]}>
                 {filteredActivities.length > 0 ? (
                     filteredActivities.map((activity) => (
                         <SearchResultsTile key={activity.id} activity={activity} />
                     ))
                 ) : (
-                    <p>No activities match these filters.</p>
+                    <li>No activities match these filters.</li>
                 )}
-            </div>
+            </ul>
         </div>
     );
 };
