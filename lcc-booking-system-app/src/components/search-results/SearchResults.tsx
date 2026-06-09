@@ -1,7 +1,7 @@
 import DropdownSelect from "../generic/dropdown-select/DropdownSelect";
 import SearchResultsTile from "./search-results-tile/SearchResultsTile";
 import styles from "./SearchResults.module.scss";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { useActivitySearchFilters } from "../../context/ActivitySearchFiltersContext";
 
 type SearchResultsProps = {
@@ -18,6 +18,10 @@ type SearchResultsProps = {
                 spaces: number;
             }[];
         }[];
+        meta?: {
+            activityTypes?: string[];
+            locations?: string[];
+        };
     };
 };
 
@@ -40,34 +44,32 @@ const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
     const allActivities = selectedScheduleDay?.activities ?? [];
 
     const locationOptions = useMemo(
-        () => Array.from(new Set(allActivities.map((activity) => activity.location))).sort(),
-        [allActivities],
+        () =>
+            activitySchedule?.meta?.locations?.length
+                ? activitySchedule.meta.locations
+                : Array.from(
+                    new Set(
+                        (activitySchedule?.schedule ?? []).flatMap((day) =>
+                            day.activities.map((activity) => activity.location),
+                        ),
+                    ),
+                ).sort(),
+        [activitySchedule?.meta?.locations, activitySchedule?.schedule],
     );
 
     const activityTypeOptions = useMemo(
-        () => Array.from(new Set(allActivities.map((activity) => activity.type))).sort(),
-        [allActivities],
+        () =>
+            activitySchedule?.meta?.activityTypes?.length
+                ? activitySchedule.meta.activityTypes
+                : Array.from(
+                    new Set(
+                        (activitySchedule?.schedule ?? []).flatMap((day) =>
+                            day.activities.map((activity) => activity.type),
+                        ),
+                    ),
+                ).sort(),
+        [activitySchedule?.meta?.activityTypes, activitySchedule?.schedule],
     );
-
-    useEffect(() => {
-        const hasInvalidLocationSelection = selectedLocations.some(
-            (selectedLocation) => !locationOptions.includes(selectedLocation),
-        );
-
-        if (hasInvalidLocationSelection) {
-            clearSelectedLocations();
-        }
-    }, [selectedLocations, locationOptions, clearSelectedLocations]);
-
-    useEffect(() => {
-        const hasInvalidTypeSelection = selectedActivityTypes.some(
-            (selectedActivityType) => !activityTypeOptions.includes(selectedActivityType),
-        );
-
-        if (hasInvalidTypeSelection) {
-            clearSelectedActivityTypes();
-        }
-    }, [selectedActivityTypes, activityTypeOptions, clearSelectedActivityTypes]);
 
     const filteredActivities = allActivities.filter((activity) => {
         const matchesLocation =
