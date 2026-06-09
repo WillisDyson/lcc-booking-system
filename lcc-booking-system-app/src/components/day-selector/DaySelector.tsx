@@ -1,5 +1,6 @@
 import styles from "./DaySelector.module.scss";
 import DaySelectorCarousel from "./day-selector-carousel/DaySelectorCarousel";
+import { useSelectedDay } from "../../context/SelectedDayContext";
 
 type AvailableDay = {
     date: string;
@@ -9,12 +10,18 @@ type AvailableDay = {
 };
 
 const DaySelector = ({ availableDays }: { availableDays: AvailableDay[] }) => {
+    const { selectedDay } = useSelectedDay();
+
     return (
         <section className={styles["day-selector"]}>
             <div className={styles["day-selector__inner"]}>
                 <DaySelectorCarousel availableDays={availableDays} />
             </div>
-            <span className={styles["day-selector__info"]}>[X] activities showing for [displayDate]</span>
+            <span className={styles["day-selector__info"]}>
+                {selectedDay
+                    ? `${selectedDay.totalActivities} activities showing for ${selectedDay.displayDate}`
+                    : "No day selected"}
+            </span>
         </section>
     );
 };

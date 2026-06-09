@@ -7,9 +7,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import DaySelectorCarouselItem from "./day-selector-carousel-item/DaySelectorCarouselItem";
 import styles from "./DaySelectorCarousel.module.scss";
+import { useSelectedDay } from "../../../context/SelectedDayContext";
 
-const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string; dayOfWeek: string; displayDate: string }[] }) => {
+const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string; dayOfWeek: string; displayDate: string; totalActivities: number }[] }) => {
     const daysPerSlide = 7;
+    const { selectedDay, setSelectedDay } = useSelectedDay();
 
     return (
         <Swiper
@@ -29,9 +31,10 @@ const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string;
                         {availableDays.slice(start, end).map((day, index) => (
                             <DaySelectorCarouselItem
                                 key={day.date}
-                                active={start + index === 0}
+                                active={selectedDay ? selectedDay.date === day.date : start + index === 0}
                                 day={day.dayOfWeek}
                                 date={day.displayDate}
+                                onClick={() => setSelectedDay(day)}
                             />
                         ))}
                     </SwiperSlide>

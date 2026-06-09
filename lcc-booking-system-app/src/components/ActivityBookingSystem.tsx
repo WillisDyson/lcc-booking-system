@@ -2,6 +2,8 @@ import DaySelector from "./day-selector/DaySelector";
 import SearchResults from "./search-results/SearchResults";
 import styles from "./ActivityBookingSystem.module.scss";
 import activityScheduleData from "../../data/activity-schedule.json";
+import { useEffect } from "react";
+import { useSelectedDay } from "../context/SelectedDayContext";
 
 type ScheduleDay = {
     date: string;
@@ -11,6 +13,8 @@ type ScheduleDay = {
 };
 
 const ActivityBookingSystem = ({}) => {
+    const { selectedDay, setSelectedDay } = useSelectedDay();
+
     const schedule = Array.isArray(activityScheduleData?.schedule)
         ? activityScheduleData.schedule
         : [];
@@ -19,7 +23,7 @@ const ActivityBookingSystem = ({}) => {
         return (
             <div className={styles["activity-booking-system"]}>
                 <p className={styles["activity-booking-system__error-message"]}>
-                    <b>Error:</b> the booking system is currently experiencing an issue. Please try again later.
+                    <b>Error:</b> there is an issue with the activity schedule data.
                 </p>
             </div>
         );
@@ -31,11 +35,17 @@ const ActivityBookingSystem = ({}) => {
         displayDate: day.displayDate,
         totalActivities: day.totalActivities,
     }));
+
+    useEffect(() => {
+        if (!selectedDay && availableDays.length > 0) {
+            setSelectedDay(availableDays[0]);
+        }
+    }, [availableDays, selectedDay, setSelectedDay]);
     
     return (
         <div className={styles["activity-booking-system"]}>
             <DaySelector availableDays={availableDays} />
-            <SearchResults />
+            <SearchResults activitySchedule={activityScheduleData} />
         </div>
 
     );

@@ -1,8 +1,11 @@
 import styles from "./DaySelectorCarouselItem.module.scss";
 
-const DaySelectorCarouselItem = ({ active, day, date }: { active?: boolean, day: string; date: string }) => {
+const DaySelectorCarouselItem = ({ active, day, date, onClick }: { active?: boolean; day: string; date: string; onClick: () => void }) => {
     return (
-        <button className={`${styles["day-selector-carousel-item"]} ${active ? styles["day-selector-carousel-item--active"] : ""}`}>
+        <button
+            type="button"
+            onClick={onClick}
+            className={`${styles["day-selector-carousel-item"]} ${active ? styles["day-selector-carousel-item--active"] : ""}`}>
             <h2 className={styles["day-selector-carousel-item__inner"]}>
                 <em className={styles["day-selector-carousel-item__day"]}>{day}</em>
                 <span className={styles["day-selector-carousel-item__date"]}>{date}</span>

@@ -2,7 +2,13 @@ import DropdownSelect from "../generic/dropdown-select/DropdownSelect";
 import SearchResultsTile from "./search-results-tile/SearchResultsTile";
 import styles from "./SearchResults.module.scss";
 
-const SearchResults = ({ }) => {
+type SearchResultsProps = {
+    activitySchedule?: unknown;
+};
+
+const SearchResults = ({ activitySchedule: _activitySchedule }: SearchResultsProps) => {
+
+
     return (
         <div className={styles["search-results"]}>
             <div className={styles["search-results__filters"]}>
