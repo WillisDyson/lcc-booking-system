@@ -33,7 +33,8 @@ const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string;
                                 key={day.date}
                                 active={selectedDay ? selectedDay.date === day.date : start + index === 0}
                                 day={day.dayOfWeek}
-                                date={day.displayDate}
+                                date={day.date}
+                                displayDate={day.displayDate}
                                 onClick={() => setSelectedDay(day)}
                             />
                         ))}

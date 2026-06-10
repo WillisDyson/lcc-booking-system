@@ -3,6 +3,8 @@
     color: var(--color-black);
     display: inline-block;
     position: relative;
+    user-select: none;
+    z-index: 1;
 
     * {
         box-sizing: border-box;

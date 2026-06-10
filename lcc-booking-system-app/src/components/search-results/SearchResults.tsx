@@ -82,7 +82,7 @@ const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
 
 
     return (
-        <div className={styles["search-results"]}>
+        <div aria-labelledby={`day-${selectedDay?.date}`} className={styles["search-results"]}>
             <div className={styles["search-results__filters"]}>
                 <DropdownSelect
                     dropdownText="Select an activity type"
