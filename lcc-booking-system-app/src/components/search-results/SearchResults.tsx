@@ -82,8 +82,8 @@ const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
 
 
     return (
-        <section aria-labelledby={`day-${selectedDay?.date}`} className={styles["search-results"]}>
-            <div className={styles["search-results__filters"]}>
+        <>
+            <section className={styles["search-results__filters"]}>
                 <DropdownSelect
                     dropdownText="Select an activity type"
                     options={activityTypeOptions}
@@ -98,17 +98,19 @@ const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
                     onToggleValue={toggleSelectedLocation}
                     onClearValues={clearSelectedLocations}
                 />
-            </div>
-            <ul className={styles["search-results__grid"]}>
-                {filteredActivities.length > 0 ? (
-                    filteredActivities.map((activity) => (
-                        <SearchResultsTile key={activity.id} activity={activity} />
-                    ))
-                ) : (
-                    <li>No activities match these filters.</li>
-                )}
-            </ul>
-        </section>
+            </section>
+            <section aria-labelledby={`day-${selectedDay?.date}`} className={styles["search-results"]}>
+                <ul className={styles["search-results__grid"]}>
+                    {filteredActivities.length > 0 ? (
+                        filteredActivities.map((activity) => (
+                            <SearchResultsTile key={activity.id} activity={activity} />
+                        ))
+                    ) : (
+                        <li>No activities match these filters.</li>
+                    )}
+                </ul>
+            </section>
+        </>
     );
 };
 

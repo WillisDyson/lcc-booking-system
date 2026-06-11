@@ -75,5 +75,9 @@
             gap: 10px;
             grid-template-columns: 110px auto;
         }
+
+        td {
+            white-space: nowrap;
+        }
     }
 }
