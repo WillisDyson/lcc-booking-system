@@ -2,9 +2,7 @@ import ActivityBookingSystem from "../components/activities/ActivityBookingSyste
 
 const Homepage = () => {
     return (
-        <main>
-            <ActivityBookingSystem />
-        </main>
+        <ActivityBookingSystem />
     );
 };
 

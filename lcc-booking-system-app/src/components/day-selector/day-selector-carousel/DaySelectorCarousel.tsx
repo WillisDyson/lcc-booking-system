@@ -14,7 +14,19 @@ const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string;
     const { selectedDay, setSelectedDay } = useActivitySearchFilters();
 
     const handleSwiper = (swiper: SwiperType) => {
-        requestAnimationFrame(() => swiper.update());
+        if (typeof document === "undefined" || !("fonts" in document)) {
+            swiper.update();
+            return;
+        }
+
+        if (document.fonts.status === "loaded") {
+            swiper.update();
+            return;
+        }
+
+        document.fonts.ready.then(() => {
+            swiper.update();
+        });
     };
 
     return (
@@ -28,7 +40,7 @@ const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string;
             onSwiper={handleSwiper}
             resizeObserver={true}
             loop={false}
-            speed={1000}>
+            speed={300}>
             {availableDays.map((day, index) => (
                 <SwiperSlide className={styles["day-selector-carousel__slide"]} key={day.date}>
                     <DaySelectorCarouselItem

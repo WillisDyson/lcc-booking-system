@@ -2,9 +2,7 @@ import ActivityDetails from "../components/activities/activity-details/ActivityD
 
 const ActivityPage = () => {
     return (
-        <main>
-            <ActivityDetails />
-        </main>
+        <ActivityDetails />
     );
 };
 
