@@ -1,4 +1,4 @@
-import ActivityBookingSystem from "../components/ActivityBookingSystem";
+import ActivityBookingSystem from "../components/activities/ActivityBookingSystem";
 
 const Homepage = () => {
     return (

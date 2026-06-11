@@ -1,9 +1,9 @@
-import DaySelector from "./day-selector/DaySelector";
-import SearchResults from "./search-results/SearchResults";
+import DaySelector from "../day-selector/DaySelector";
+import SearchResults from "../search-results/SearchResults";
 import styles from "./ActivityBookingSystem.module.scss";
-import activityScheduleData from "../../data/activity-schedule.json";
+import activityScheduleData from "../../../data/activity-schedule.json";
 import { useEffect } from "react";
-import { useActivitySearchFilters } from "../context/ActivitySearchFiltersContext";
+import { useActivitySearchFilters } from "../../context/ActivitySearchFiltersContext";
 
 type ScheduleDay = {
     date: string;

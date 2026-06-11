@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage";
 import { ActivitySearchFiltersProvider } from "./context/ActivitySearchFiltersContext";
+import Homepage from "./pages/Homepage";
+import ActivityPage from "./pages/ActivityPage";
 import './App.module.scss'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Router>
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/activity/:activityId" element={<ActivityPage />} />
           </Routes>
       </Router>
     </ActivitySearchFiltersProvider>

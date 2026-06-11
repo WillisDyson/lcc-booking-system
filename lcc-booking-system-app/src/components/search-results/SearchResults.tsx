@@ -82,7 +82,7 @@ const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
 
 
     return (
-        <div aria-labelledby={`day-${selectedDay?.date}`} className={styles["search-results"]}>
+        <section aria-labelledby={`day-${selectedDay?.date}`} className={styles["search-results"]}>
             <div className={styles["search-results__filters"]}>
                 <DropdownSelect
                     dropdownText="Select an activity type"
@@ -108,7 +108,7 @@ const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
                     <li>No activities match these filters.</li>
                 )}
             </ul>
-        </div>
+        </section>
     );
 };
 

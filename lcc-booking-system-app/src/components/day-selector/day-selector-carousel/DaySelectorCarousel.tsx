@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,37 +11,35 @@ import styles from "./DaySelectorCarousel.module.scss";
 import { useActivitySearchFilters } from "../../../context/ActivitySearchFiltersContext";
 
 const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string; dayOfWeek: string; displayDate: string; totalActivities: number }[] }) => {
-    const daysPerSlide = 7;
     const { selectedDay, setSelectedDay } = useActivitySearchFilters();
+
+    const handleSwiper = (swiper: SwiperType) => {
+        requestAnimationFrame(() => swiper.update());
+    };
 
     return (
         <Swiper
         className={styles["day-selector-carousel"]}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            slidesPerView={1}
+            slidesPerView={'auto'}
             navigation={{
                 addIcons: false
             }}
+            onSwiper={handleSwiper}
+            resizeObserver={true}
+            loop={false}
             speed={1000}>
-            {Array.from({ length: Math.ceil(availableDays.length / daysPerSlide) }, (_, slideIndex) => {
-                const start = slideIndex * daysPerSlide;
-                const end = start + daysPerSlide;
-
-                return (
-                    <SwiperSlide className={styles["day-selector-carousel__slide"]} key={`slide-${slideIndex}`}>
-                        {availableDays.slice(start, end).map((day, index) => (
-                            <DaySelectorCarouselItem
-                                key={day.date}
-                                active={selectedDay ? selectedDay.date === day.date : start + index === 0}
-                                day={day.dayOfWeek}
-                                date={day.date}
-                                displayDate={day.displayDate}
-                                onClick={() => setSelectedDay(day)}
-                            />
-                        ))}
-                    </SwiperSlide>
-                );
-            })}
+            {availableDays.map((day, index) => (
+                <SwiperSlide className={styles["day-selector-carousel__slide"]} key={day.date}>
+                    <DaySelectorCarouselItem
+                        active={selectedDay ? selectedDay.date === day.date : index === 0}
+                        day={day.dayOfWeek}
+                        date={day.date}
+                        displayDate={day.displayDate}
+                        onClick={() => setSelectedDay(day)}
+                    />
+                </SwiperSlide>
+            ))}
         </Swiper>
     );
 };
