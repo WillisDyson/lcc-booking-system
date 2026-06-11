@@ -1,3 +1,5 @@
+@use "../../../styles/variables" as *;
+
 .day-selector-carousel {
     display: flex !important;
     height: 90px;
@@ -22,16 +24,39 @@
             background-repeat: no-repeat;
             border-radius: 7px;
             height: 48px;
+            transform: translateY(-50%) !important;
+            margin: 0;
             width: 48px;
+
+            @media (max-width: $small-screen-width) {
+                background-size: 24px;
+                border-radius: 4px;
+                bottom: 0;
+                height: 36px;
+                top: unset;
+                width: 36px;
+            }
         }
 
         .swiper-button-prev {
             left: 16px;
-            transform: rotate(180deg);
+            right: unset;
+            transform: translateY(-50%) rotate(180deg) !important;
+
+            @media (max-width: $small-screen-width) {
+                left: 40%;
+                transform: translateX(-50%) translateY(-50%) rotate(180deg) !important;
+            }
         }
 
         .swiper-button-next {
+            left: unset;
             right: 16px;
+
+            @media (max-width: $small-screen-width) {
+                right: 40%;
+                transform: translateX(50%) translateY(-50%) !important;
+            }
         }
 
         .swiper-button-disabled {

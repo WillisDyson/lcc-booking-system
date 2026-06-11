@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .day-selector {
     position: relative;
 
@@ -5,6 +7,10 @@
         background-color: var(--color-accent-primary);
         padding: 0 100px;
         position: relative;
+
+        @media (max-width: $small-screen-width) {
+            padding: 0 20px 42px;
+        }
     }
 
     &__info {

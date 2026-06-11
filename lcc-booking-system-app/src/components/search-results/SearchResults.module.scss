@@ -30,8 +30,20 @@
         gap: 32px;
         grid-template-columns: repeat(4, 1fr);
 
-        @media (max-width: $very-wide-screen-breakpoint) {
+        @media (max-width: $large-screen-width) {
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: $medium-screen-width) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $small-screen-width) {
+            grid-template-columns: 1fr;
+        }
+
+        li {
+            min-width: 100%;
         }
     }
 }
