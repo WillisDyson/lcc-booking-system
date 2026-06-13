@@ -4,6 +4,10 @@
     padding: 0 16px 16px;
     overflow: auto;
 
+    @media (max-width: $small-screen-width) {
+        padding: 0 10px 10px;
+    }
+
     &::-webkit-scrollbar {
         width: 20px;
     }
@@ -34,7 +38,8 @@
         }
 
         @media (max-width: $small-screen-width) {
-            padding: 16px;
+            gap: 8px 10px;
+            padding: 16px 10px;
         }
     }
 

@@ -31,7 +31,8 @@
 
         @media (max-width: $small-screen-width) {
             font-size: 0.875rem;
-            padding: 0 14px;
+            gap: 6px;
+            padding: 0 10px;
         }
     }
 
@@ -60,16 +61,26 @@
         padding: 6px 16px 14px;
         position: absolute;
         width: 100%;
+
+        @media (max-width: $small-screen-width) {
+            padding: 6px 10px 10px;
+        }
     }
 
     &__option {
-        display: flex;
         align-items: center;
+        display: flex;
+        font-size: 1rem;
         gap: 8px;
         padding: 3px 0;
 
         &, * {
             cursor: pointer;
+        }
+
+        @media (max-width: $small-screen-width) {
+            font-size: 0.875rem;
+            gap: 6px;
         }
     }
 
