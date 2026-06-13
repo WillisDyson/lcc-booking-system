@@ -1,13 +1,10 @@
 # LCC Booking System
 
-A responsive, accessible booking interface built with **React**, **TypeScript**, and **Vite**.  
-The project focuses on reusable components, performance, and accessibility-first design, with a modular and scalable architecture.
-
 ---
 
-**See the app hosted live here:** https://willis-dyson-lcc-activities.netlify.app/
+## Live preview:
 
-Repository: https://github.com/WillisDyson/lcc-booking-system  
+**See the app hosted live here:** https://willis-dyson-lcc-activities.netlify.app/
 
 ---
 
