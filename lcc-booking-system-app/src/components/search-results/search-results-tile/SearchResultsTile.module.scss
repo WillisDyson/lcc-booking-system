@@ -17,7 +17,7 @@
     padding: 16px;
     user-select: none;
 
-    @media (max-width: $small-screen-width) {
+    @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
         border-radius: 4px;
         gap: 10px;
         padding: 12px;
@@ -50,7 +50,7 @@
         font-size: 1rem;
         gap: 8px;
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             font-size: 0.933rem;
             gap: 6px;
         }
@@ -59,7 +59,7 @@
             height: 16px;
             width: 16px;
 
-            @media (max-width: $small-screen-width) {
+            @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
                 height: 14px;
                 width: 14px;
             }
@@ -76,7 +76,7 @@
         margin-left: auto;
         padding: 0 4px;
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             font-size: 0.8444rem;
             padding: 0 3px;
         }
@@ -86,7 +86,7 @@
         font-size: 1.188rem;
         font-weight: 700;
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             font-size: 1.067rem;
         }
     }
@@ -95,7 +95,7 @@
         font-size: 0.875rem;
         text-align: left;
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             font-size: 0.822rem;
         }
         

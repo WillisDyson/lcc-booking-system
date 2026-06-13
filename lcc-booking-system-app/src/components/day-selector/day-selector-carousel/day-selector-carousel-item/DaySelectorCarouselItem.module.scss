@@ -12,7 +12,7 @@
     transition: var(--transition-speed);
     user-select: none;
 
-    @media (max-width: $small-screen-width) {
+    @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
         padding: 8px 10px;
     }
 
@@ -35,7 +35,7 @@
         flex-direction: column;
         gap: 12px;
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             gap: 8px;
         }
     }
@@ -49,7 +49,7 @@
         letter-spacing: var(--spacing-extra);
         transition: var(--transition-speed);
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             font-size: 1.6rem;
             line-height: 1.6rem;
         }
@@ -62,7 +62,7 @@
         line-height: 1.125rem;
         letter-spacing: var(--spacing-extra);
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             font-size: 1rem;
             line-height: 1rem;
         }

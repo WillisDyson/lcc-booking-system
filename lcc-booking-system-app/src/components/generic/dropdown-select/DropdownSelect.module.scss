@@ -29,7 +29,7 @@
             background-color: var(--color-accent-secondary);
         }
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             font-size: 0.875rem;
             gap: 6px;
             padding: 0 10px;
@@ -46,7 +46,7 @@
         transition: transform var(--transition-speed-slower);
         width: 13px;
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             height: 6px;
             width: 10px;
         }
@@ -62,7 +62,7 @@
         position: absolute;
         width: 100%;
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             padding: 6px 10px 10px;
         }
     }
@@ -78,7 +78,7 @@
             cursor: pointer;
         }
 
-        @media (max-width: $small-screen-width) {
+        @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
             font-size: 0.875rem;
             gap: 6px;
         }

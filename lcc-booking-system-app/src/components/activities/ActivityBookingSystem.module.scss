@@ -18,7 +18,7 @@
         margin: 16px;
     }
 
-    @media (max-width: $small-screen-width) {
+    @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
         border-radius: 0;
         height: 100%;
         margin: 0;
