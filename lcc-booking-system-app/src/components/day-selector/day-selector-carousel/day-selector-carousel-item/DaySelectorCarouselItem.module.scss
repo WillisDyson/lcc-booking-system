@@ -1,4 +1,4 @@
-
+@use "../../../../styles/breakpoints" as *;
 
 .day-selector-carousel-item {
     $self: &;
@@ -11,6 +11,10 @@
     padding: 12px 15.5px;
     transition: var(--transition-speed);
     user-select: none;
+
+    @media (max-width: $small-screen-width) {
+        padding: 8px 10px;
+    }
 
     &--active {
         background-color: var(--color-white);
@@ -30,6 +34,10 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+
+        @media (max-width: $small-screen-width) {
+            gap: 8px;
+        }
     }
 
     &__day {
@@ -40,6 +48,11 @@
         line-height: 2.125rem;
         letter-spacing: var(--spacing-extra);
         transition: var(--transition-speed);
+
+        @media (max-width: $small-screen-width) {
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+        }
     }
 
     &__date {
@@ -48,5 +61,10 @@
         font-weight: 300;
         line-height: 1.125rem;
         letter-spacing: var(--spacing-extra);
+
+        @media (max-width: $small-screen-width) {
+            font-size: 1rem;
+            line-height: 1rem;
+        }
     }
 }

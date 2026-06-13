@@ -1,10 +1,11 @@
 @use "/src/styles/animations" as *;
+@use "/src/styles/breakpoints" as *;
 
 .search-results-tile {
     $self: &;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
-    animation-name: fadeUpIn;
+    animation-name: fadeIn;
     background-color: var(--color-accent-tertiary);
     border-radius: 6px;
     color: var(--color-text-primary);
@@ -15,6 +16,12 @@
     transition: var(--transition-speed);
     padding: 16px;
     user-select: none;
+
+    @media (max-width: $small-screen-width) {
+        border-radius: 4px;
+        gap: 10px;
+        padding: 12px;
+    }
 
     &:hover {
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -42,6 +49,21 @@
         display: flex;
         font-size: 1rem;
         gap: 8px;
+
+        @media (max-width: $small-screen-width) {
+            font-size: 0.933rem;
+            gap: 6px;
+        }
+
+        img {
+            height: 16px;
+            width: 16px;
+
+            @media (max-width: $small-screen-width) {
+                height: 14px;
+                width: 14px;
+            }
+        }
     }
 
     &__spaces {
@@ -53,16 +75,29 @@
         height: 27px;
         margin-left: auto;
         padding: 0 4px;
+
+        @media (max-width: $small-screen-width) {
+            font-size: 0.8444rem;
+            padding: 0 3px;
+        }
     }
 
     &__title {
         font-size: 1.188rem;
         font-weight: 700;
+
+        @media (max-width: $small-screen-width) {
+            font-size: 1.067rem;
+        }
     }
 
     &__main-info {
         font-size: 0.875rem;
         text-align: left;
+
+        @media (max-width: $small-screen-width) {
+            font-size: 0.822rem;
+        }
         
         tbody {
             display: flex;

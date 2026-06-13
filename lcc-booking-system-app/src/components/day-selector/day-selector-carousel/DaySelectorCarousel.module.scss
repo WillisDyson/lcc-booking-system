@@ -1,4 +1,4 @@
-@use "../../../styles/variables" as *;
+@use "../../../styles/breakpoints" as *;
 
 .day-selector-carousel {
     display: flex !important;
@@ -6,6 +6,10 @@
     padding: 20px 0 !important;
     position: static;
     width: 100%;
+
+    @media (max-width: $small-screen-width) {
+        height: 80px;
+    }
 
     &__slide {
         display: flex !important;
@@ -44,8 +48,8 @@
             transform: translateY(-50%) rotate(180deg) !important;
 
             @media (max-width: $small-screen-width) {
-                left: 40%;
-                transform: translateX(-50%) translateY(-50%) rotate(180deg) !important;
+                left: 20px;
+                transform: translateY(-50%) rotate(180deg) !important;
             }
         }
 
@@ -54,8 +58,8 @@
             right: 16px;
 
             @media (max-width: $small-screen-width) {
-                right: 40%;
-                transform: translateX(50%) translateY(-50%) !important;
+                right: 20px;
+                transform: translateY(-50%) !important;
             }
         }
 

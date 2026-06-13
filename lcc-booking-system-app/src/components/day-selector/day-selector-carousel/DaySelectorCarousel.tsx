@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -32,15 +33,17 @@ const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string;
     return (
         <Swiper
         className={styles["day-selector-carousel"]}
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            slidesPerView={'auto'}
-            navigation={{
-                addIcons: false
-            }}
-            onSwiper={handleSwiper}
-            resizeObserver={true}
-            loop={false}
-            speed={300}>
+        loop={false}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        navigation={{
+            addIcons: false
+        }}
+        onSwiper={handleSwiper}
+        resizeObserver={true}
+        slidesPerView={'auto'}
+        spaceBetween={2}
+        speed={300}
+        >
             {availableDays.map((day, index) => (
                 <SwiperSlide className={styles["day-selector-carousel__slide"]} key={day.date}>
                     <DaySelectorCarouselItem

@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use "../../styles/breakpoints" as *;
 
 .day-selector {
     position: relative;
@@ -9,7 +9,7 @@
         position: relative;
 
         @media (max-width: $small-screen-width) {
-            padding: 0 20px 42px;
+            padding: 10px 20px 46px;
         }
     }
 
@@ -20,5 +20,10 @@
         font-size: 1.125rem;
         font-weight: 700;
         padding: 14px 24px;
+
+        @media (max-width: $small-screen-width) {
+            font-size: 0.966rem;
+            padding: 16px 20px;
+        }
     }
 }

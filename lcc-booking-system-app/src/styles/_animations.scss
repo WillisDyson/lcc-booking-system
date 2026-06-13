@@ -1,11 +1,9 @@
-@keyframes fadeUpIn {
+@keyframes fadeIn {
     0% {
         opacity: 0;
-        top: 40px;
     }
 
     100% {
         opacity: 1;
-        top: 0;
     }
 }

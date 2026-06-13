@@ -1,10 +1,11 @@
+@use "../../../styles/breakpoints" as *;
+
 .dropdown-select {
     $self: &;
     color: var(--color-black);
     display: inline-block;
     position: relative;
     user-select: none;
-    z-index: 1;
 
     * {
         box-sizing: border-box;
@@ -20,17 +21,29 @@
         gap: 10px;
         height: 32px;
         padding: 0 16px;
+        white-space: nowrap;
         width: 100%;
+
+        @media (max-width: $small-screen-width) {
+            font-size: 0.875rem;
+            padding: 0 14px;
+        }
     }
 
     &__arrow {
         background-image: url('/src/assets/dropdown-select/dropdown-select-arrow.svg');
         background-position: 50%;
+        background-size: contain;
         height: 8px;
         margin-left: auto;
         transform: rotate(0deg);
         transition: transform var(--transition-speed-slower);
         width: 13px;
+
+        @media (max-width: $small-screen-width) {
+            height: 6px;
+            width: 10px;
+        }
     }
 
     &__content {
