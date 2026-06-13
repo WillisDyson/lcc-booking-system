@@ -21,8 +21,13 @@
         gap: 10px;
         height: 32px;
         padding: 0 16px;
+        transition: background-color var(--transition-speed);
         white-space: nowrap;
         width: 100%;
+
+        &:active {
+            background-color: var(--color-accent-secondary);
+        }
 
         @media (max-width: $small-screen-width) {
             font-size: 0.875rem;
