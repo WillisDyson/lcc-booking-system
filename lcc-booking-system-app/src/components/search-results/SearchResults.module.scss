@@ -5,6 +5,7 @@
     overflow: auto;
 
     @media (max-width: $small-screen-width) or (max-height: $small-screen-height) {
+        overflow: unset;
         padding: 0 10px 10px;
     }
 
