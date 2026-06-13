@@ -1,7 +1,8 @@
-@use "../../../styles/breakpoints" as *;
+@use "/src/styles/breakpoints" as *;
 
 .day-selector-carousel {
     display: flex !important;
+    gap: 2px;
     height: 90px;
     padding: 20px 0 !important;
     position: static;

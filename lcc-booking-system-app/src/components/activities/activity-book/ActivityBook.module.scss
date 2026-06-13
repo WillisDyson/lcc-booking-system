@@ -1,0 +1,19 @@
+.activity-book {
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

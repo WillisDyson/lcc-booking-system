@@ -1,8 +1,8 @@
-import ActivityDetails from "../components/activities/activity-details/ActivityDetails";
+import ActivityBook from "../components/activities/activity-book/ActivityBook";
 
 const ActivityPage = () => {
     return (
-        <ActivityDetails />
+        <ActivityBook />
     );
 };
 

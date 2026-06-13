@@ -16,6 +16,7 @@ type SearchResultsTileProps = {
 
 const SearchResultsTile = ({ activity }: SearchResultsTileProps) => {
     const isFullyBooked = activity.spaces <= 0;;
+    const titleId = `search-results-tile-title-${activity.id}`;
     const tileContent = (
         <>
             <div className={styles["search-results-tile__details"]}>
@@ -29,15 +30,15 @@ const SearchResultsTile = ({ activity }: SearchResultsTileProps) => {
                     {isFullyBooked ? "Fully booked" : `${activity.spaces} spaces`}
                 </span>
             </div>
-            <h3 className={styles["search-results-tile__title"]}>{activity.name}</h3>
+            <h3 id={titleId} className={styles["search-results-tile__title"]}>{activity.name}</h3>
             <table className={styles["search-results-tile__main-info"]}>
                 <tbody>
                     <tr>
-                        <th>Location</th>
+                        <th scope="row">Location</th>
                         <td>{activity.location}</td>
                     </tr>
                     <tr>
-                        <th>Type</th>
+                        <th scope="row">Type</th>
                         <td>{activity.type}</td>
                     </tr>
                 </tbody>
@@ -46,12 +47,16 @@ const SearchResultsTile = ({ activity }: SearchResultsTileProps) => {
     );
 
     if (isFullyBooked) {
-        return <div className={styles["search-results-tile"] + " " + styles["search-results-tile--fully-booked"]}>{tileContent}</div>;
+        return (
+        <li>
+            <div aria-labelledby={titleId} className={styles["search-results-tile"] + " " + styles["search-results-tile--fully-booked"]}>{tileContent}</div>
+        </li>
+        )
     }
 
     return (
         <li>
-            <Link to={`/activity/${activity.id}`} className={styles["search-results-tile"]}>
+            <Link to={`/book/${activity.id}`} aria-labelledby={titleId} className={styles["search-results-tile"]}>
                 {tileContent}
             </Link>
         </li>

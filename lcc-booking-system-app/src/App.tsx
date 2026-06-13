@@ -11,7 +11,7 @@ function App() {
         <Router>
             <Routes>
               <Route path="/" element={<Homepage />} />
-              <Route path="/activity/:activityId" element={<ActivityPage />} />
+              <Route path="/book/:activityId" element={<ActivityPage />} />
             </Routes>
         </Router>
       </ActivitySearchFiltersProvider>

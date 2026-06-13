@@ -41,7 +41,6 @@ const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string;
         onSwiper={handleSwiper}
         resizeObserver={true}
         slidesPerView={'auto'}
-        spaceBetween={2}
         speed={300}
         >
             {availableDays.map((day, index) => (
