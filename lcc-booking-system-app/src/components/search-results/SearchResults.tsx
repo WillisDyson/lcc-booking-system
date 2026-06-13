@@ -16,6 +16,8 @@ type SearchResultsProps = {
                 location: string;
                 type: string;
                 spaces: number;
+                status: string;
+                link: string;
             }[];
         }[];
         meta?: {

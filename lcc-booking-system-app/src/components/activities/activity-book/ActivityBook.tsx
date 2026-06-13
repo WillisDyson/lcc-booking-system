@@ -10,6 +10,8 @@ type Activity = {
     location: string;
     type: string;
     spaces: number;
+    status: string;
+    link: string;
 };
 
 type ScheduleDay = {
@@ -20,6 +22,15 @@ type ScheduleDay = {
 
 const ActivityBook = () => {
     const { activityId } = useParams();
+
+    if (!activityId) {
+        return (
+            <div className={styles["activity-book"]}>
+                <Link to="/">Go back to activity search</Link>
+                <h1>No activity found</h1>
+            </div>
+        );
+    }
 
     const matchedActivity = activityScheduleData.schedule
         .flatMap((day: ScheduleDay) =>

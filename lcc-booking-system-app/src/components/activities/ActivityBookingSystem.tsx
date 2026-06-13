@@ -12,7 +12,7 @@ type ScheduleDay = {
     totalActivities: number;
 };
 
-const ActivityBookingSystem = ({}) => {
+const ActivityBookingSystem = () => {
     const { setSelectedDay } = useActivitySearchFilters();
 
     const schedule = Array.isArray(activityScheduleData?.schedule)
