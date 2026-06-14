@@ -7,7 +7,10 @@ const DaySelectorCarouselItem = ({ active, day, date, displayDate, onClick }: { 
     return (
         <button
             type="button"
+            role="tab"
             onClick={onClick}
+            aria-controls="search-results-panel"
+            aria-selected={active}
             className={`${styles["day-selector-carousel-item"]} ${active ? styles["day-selector-carousel-item--active"] : ""}`}>
             <h2 id={`day-${date}`} className={styles["day-selector-carousel-item__inner"]}>
                 <em className={styles["day-selector-carousel-item__day"]}>{day}</em>

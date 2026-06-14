@@ -38,6 +38,7 @@ const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string;
     return (
         <Swiper
         className={styles["day-selector-carousel"]}
+        role="tablist"
         loop={false}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         navigation={{

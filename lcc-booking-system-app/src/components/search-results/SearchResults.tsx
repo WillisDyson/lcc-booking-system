@@ -100,7 +100,7 @@ const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
                     onClearValues={clearSelectedLocations}
                 />
             </section>
-            <section aria-labelledby={`day-${selectedDay?.date}`} className={styles["search-results"]}>
+            <section id="search-results-panel" aria-labelledby={`day-${selectedDay?.date}`} className={styles["search-results"]}>
                 <ul className={styles["search-results__grid"]}>
                     {filteredActivities.length > 0 ? (
                         filteredActivities.map((activity) => (
