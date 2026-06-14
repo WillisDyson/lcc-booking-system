@@ -42,6 +42,7 @@ const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string;
         resizeObserver={true}
         slidesPerView={'auto'}
         speed={300}
+        spaceBetween={2}
         >
             {availableDays.map((day, index) => (
                 <SwiperSlide className={styles["day-selector-carousel__slide"]} key={day.date}>
