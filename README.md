@@ -1,10 +1,17 @@
-# LCC Booking System
+
+# Willis Dyson – LCC Booking System
+
+## **See the app hosted live here:** https://willis-dyson-lcc-activities.netlify.app/
 
 ---
 
-## Live preview:
+## Final result screenshots
 
-**See the app hosted live here:** https://willis-dyson-lcc-activities.netlify.app/
+### Desktop view
+![alt text](lcc-booking-system-app/src/assets/readme-images/app-screenshot.png)
+
+### Mobile view
+![alt text](lcc-booking-system-app/src/assets/readme-images/app-screenshot--mobile.png)
 
 ---
 
@@ -103,19 +110,15 @@
 
 ---
 
-## Screenshots
-
-To be added soon
-
----
-
-## Known Limitations & Future Improvements
+## Known Limitations (things that I would add if I had more time):
 
 - “Skip to content” accessibility link  
 - Improved animation transitions when filtering tiles  
 - “Clear filters” button for better UX  
 - Dark mode using `:root` theme tokens  
-- Reduced prop drilling via improved state architecture  
+- Reduced prop drilling via improved state architecture
+- Better performance by removing over-reliance on useMemo in some places
+- Add unit tests
 
 ---
 
@@ -132,4 +135,4 @@ src/
 
 ## Note
 
-Please contact me at willisdyson@gmail.com if you have any questions or issues accessing this project. Thank you.
+Please contact via the links on profile if you have any questions or issues accessing this project. Thank you.
