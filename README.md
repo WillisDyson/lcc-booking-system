@@ -8,10 +8,10 @@
 ## Final result screenshots
 
 ### Desktop view
-![alt text](lcc-booking-system-app/src/assets/readme-images/app-screenshot.png)
+![Screenshot of the desktop version of the booking system, with selectable dates along the top, filters in the middle and activity tiles at the bottom.](lcc-booking-system-app/src/assets/readme-images/app-screenshot.png)
 
 ### Mobile view
-![alt text](lcc-booking-system-app/src/assets/readme-images/app-screenshot--mobile.png)
+![Screenshot of the mobile version of the booking system, with selectable dates along the top, filters in the middle and activity tiles at the bottom.](lcc-booking-system-app/src/assets/readme-images/app-screenshot--mobile.png)
 
 ---
 
