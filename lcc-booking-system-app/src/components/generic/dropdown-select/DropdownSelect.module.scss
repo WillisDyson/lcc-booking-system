@@ -8,7 +8,7 @@
     user-select: none;
 
     * {
-        box-sizing: border-box;
+        box-sizing: border-box; // Ensures the dropdown content box lines up perfectly with the button.
     }
 
     &__button {

@@ -8,7 +8,7 @@
     box-shadow: 0 0 12px rgba(0 0 0 / 0.18);
     display: flex;
     flex-direction: column;
-    height: calc(100% - 60px);
+    height: calc(100% - 60px); // Subtract the top/bottom margin to centre the component vertically on the page.
     margin: 30px;
     max-height: 832px;
     max-width: 1440px;
@@ -16,7 +16,7 @@
     width: 100%;
 
     @media (max-width: $medium-screen-width) {
-        height: calc(100% - 32px);
+        height: calc(100% - 32px); // Subtract the top/bottom margin to centre the component vertically on the page.
         margin: 16px;
     }
 
@@ -34,6 +34,7 @@
         text-align: center;
     }
 
+    // Visually hidden <h1>for accessibility and SEO purposes.
     &__hidden-title {
         border: 0;
         clip: rect(0, 0, 0, 0);

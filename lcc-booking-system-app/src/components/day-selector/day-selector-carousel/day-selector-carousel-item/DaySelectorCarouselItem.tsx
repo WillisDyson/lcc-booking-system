@@ -1,4 +1,7 @@
 import styles from "./DaySelectorCarouselItem.module.scss";
+/**
+ * A single item in the DaySelectorCarousel, containing a button which sets the selected day when clicked.
+ */
 
 const DaySelectorCarouselItem = ({ active, day, date, displayDate, onClick }: { active?: boolean; day: string; date: string; displayDate: string; onClick: () => void }) => {
     return (

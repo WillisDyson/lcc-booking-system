@@ -11,9 +11,14 @@ import DaySelectorCarouselItem from "./day-selector-carousel-item/DaySelectorCar
 import styles from "./DaySelectorCarousel.module.scss";
 import { useActivitySearchFilters } from "../../../context/ActivitySearchFiltersContext";
 
+/**
+ * A carousel component that takes an array of available days and renders a carousel item for each one.
+ */
+
 const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string; dayOfWeek: string; displayDate: string; totalActivities: number }[] }) => {
     const { selectedDay, setSelectedDay } = useActivitySearchFilters();
 
+    // Update the Swiper once fonts are loaded to ensure item widths and alignment is correct.
     const handleSwiper = (swiper: SwiperType) => {
         if (typeof document === "undefined" || !("fonts" in document)) {
             swiper.update();
@@ -44,7 +49,8 @@ const DaySelectorCarousel = ({ availableDays }: { availableDays: { date: string;
         speed={300}
         spaceBetween={2}
         >
-            {availableDays.map((day, index) => (
+            {// Render a SwiperSlide for each available day, passing the necessary props to the DaySelectorCarouselItem component.}
+            availableDays.map((day, index) => (
                 <SwiperSlide className={styles["day-selector-carousel__slide"]} key={day.date}>
                     <DaySelectorCarouselItem
                         active={selectedDay ? selectedDay.date === day.date : index === 0}

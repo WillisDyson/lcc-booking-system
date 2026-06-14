@@ -27,6 +27,12 @@ type SearchResultsProps = {
     };
 };
 
+/**
+ * Main component for displaying the search results based on the selected day and applied filters.
+ * It includes dropdown filters for activity types and locations, and renders a grid of search result tiles for the activities that match the selected criteria.
+ * If no activities match the filters, a message is displayed indicating that no results were found.
+ */
+
 const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
     const {
         selectedDay,
@@ -38,41 +44,34 @@ const SearchResults = ({ activitySchedule }: SearchResultsProps) => {
         clearSelectedActivityTypes,
     } = useActivitySearchFilters();
 
+    // Find the schedule for the selected day, if any, and extract the activities for that day.
     const selectedScheduleDay = useMemo(
         () => activitySchedule?.schedule?.find((day) => day.date === selectedDay?.date),
         [activitySchedule?.schedule, selectedDay?.date],
     );
 
     const allActivities = selectedScheduleDay?.activities ?? [];
+    
+    // Find the unique locations and activity types from the activity schedule data
+    const { locationOptions, activityTypeOptions } = useMemo(() => {
+        const foundLocations = new Set<string>();
+        const foundActivityTypes = new Set<string>();
 
-    const locationOptions = useMemo(
-        () =>
-            activitySchedule?.meta?.locations?.length
-                ? activitySchedule.meta.locations
-                : Array.from(
-                    new Set(
-                        (activitySchedule?.schedule ?? []).flatMap((day) =>
-                            day.activities.map((activity) => activity.location),
-                        ),
-                    ),
-                ).sort(),
-        [activitySchedule?.meta?.locations, activitySchedule?.schedule],
-    );
+        for (const day of activitySchedule?.schedule ?? []) {
+            for (const activity of day.activities) {
+                foundLocations.add(activity.location);
+                foundActivityTypes.add(activity.type);
+            }
+        }
 
-    const activityTypeOptions = useMemo(
-        () =>
-            activitySchedule?.meta?.activityTypes?.length
-                ? activitySchedule.meta.activityTypes
-                : Array.from(
-                    new Set(
-                        (activitySchedule?.schedule ?? []).flatMap((day) =>
-                            day.activities.map((activity) => activity.type),
-                        ),
-                    ),
-                ).sort(),
-        [activitySchedule?.meta?.activityTypes, activitySchedule?.schedule],
-    );
+        return {
+            // Return a sorted array of locations and activity types in alphabetical order to be used as options in the dropdown filters.
+            locationOptions: Array.from(foundLocations).sort(),
+            activityTypeOptions: Array.from(foundActivityTypes).sort(),
+        };
+    }, [activitySchedule?.schedule]);
 
+    // Filter the activities based on the selected locations and activity types. If no filters are applied, all activities for the selected day are shown.
     const filteredActivities = allActivities.filter((activity) => {
         const matchesLocation =
             selectedLocations.length === 0 || selectedLocations.includes(activity.location);

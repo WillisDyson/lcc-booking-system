@@ -9,6 +9,11 @@ type DropdownSelectProps = {
     onClearValues: () => void;
 };
 
+/**
+ * Component for a generic dropdown select menu, allowing for multiple selections and displaying the count of selected items.
+ */
+
+
 const DropdownSelect = ({
     dropdownText,
     options,
@@ -17,8 +22,12 @@ const DropdownSelect = ({
     onClearValues,
 }: DropdownSelectProps) => {
     const [isOpen, setIsOpen] = useState(false);
+
+    // Give each instance of the dropdown menu a unique ID for accessibility purposes.
     const panelId = useId();
     const selectedCount = selectedValues.length;
+
+    // If filter options are selected, display the number of filters applied in the button text.
     const buttonText = selectedCount > 0 ? `${dropdownText} (${selectedCount})` : dropdownText;
 
     return (
@@ -29,6 +38,8 @@ const DropdownSelect = ({
                     setIsOpen(false);
                 }
             }}
+
+            // Close the dropdown when focus leaves the component, but not when focus moves to one of the select options within.
             onBlur={(e) => {
                 if (!e.currentTarget.contains(e.relatedTarget as Node)) {
                     setIsOpen(false);
@@ -54,8 +65,8 @@ const DropdownSelect = ({
             <fieldset
                 id={panelId}
                 className={`${styles["dropdown-select__content"]} `}
-                onMouseDown={(e) => e.preventDefault()} // Pres the dropdown from closing when on a <label> or on space between options
-            >
+                onMouseDown={(e) => e.preventDefault()} // Prevent the dropdown from closing when clicking on a <label> or on space between options
+            > 
                 <label className={styles["dropdown-select__option"]}>
                     <input
                         className={styles["dropdown-select__checkbox"]}
@@ -64,9 +75,9 @@ const DropdownSelect = ({
                         onChange={() => onClearValues()}
                     />
                     All
-                </label>
+                </label> 
 
-                {options.map((option) => (
+                {options.map((option) => ( // Render each option as a checkbox input.
                     <label key={option} className={styles["dropdown-select__option"]}>
                         <input
                             className={styles["dropdown-select__checkbox"]}

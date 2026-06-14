@@ -20,6 +20,10 @@ type ScheduleDay = {
     activities?: Activity[];
 };
 
+/**
+ * Displays a booking confirmation message for the selected activity.
+ * Falls back to a "not found" state when the id is missing or invalid.
+ */
 const ActivityBook = () => {
     const { activityId } = useParams();
 
@@ -32,6 +36,7 @@ const ActivityBook = () => {
         );
     }
 
+    // Flatten each day into activity records enriched with the display date, and check for a match against the activityId from the URL.
     const matchedActivity = activityScheduleData.schedule
         .flatMap((day: ScheduleDay) =>
             (day.activities ?? []).map((activity) => ({

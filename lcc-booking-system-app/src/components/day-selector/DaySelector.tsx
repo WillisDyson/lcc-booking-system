@@ -9,6 +9,10 @@ type AvailableDay = {
     totalActivities: number;
 };
 
+/**
+ * The main parent component for the day selector, which includes the DaySelectorCarousel and a message displaying the number of activities for the selected day.
+ */
+
 const DaySelector = ({ availableDays }: { availableDays: AvailableDay[] }) => {
     const { selectedDay } = useActivitySearchFilters();
 

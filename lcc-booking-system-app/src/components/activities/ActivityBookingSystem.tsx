@@ -12,9 +12,14 @@ type ScheduleDay = {
     totalActivities: number;
 };
 
+/**
+ * The main component for the activity booking system, which includes the day selector and search results.
+ * The activity schedule data is imported and passed down to the child components.
+ * 
+ */
+
 const ActivityBookingSystem = () => {
     const { setSelectedDay } = useActivitySearchFilters();
-
     const schedule = Array.isArray(activityScheduleData?.schedule)
         ? activityScheduleData.schedule
         : [];
@@ -40,6 +45,7 @@ const ActivityBookingSystem = () => {
         [schedule],
     );
 
+    // If there are available days, set the first day as the selected day when the component mounts.
     useEffect(() => {
         if (availableDays.length > 0) {
             setSelectedDay(availableDays[0]);

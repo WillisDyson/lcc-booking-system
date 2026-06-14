@@ -18,35 +18,39 @@ type ActivitySearchFiltersContextValue = {
     clearSelectedActivityTypes: () => void;
 };
 
+/**
+ * Context for managing the state of the activity search filters (selected day, location and activity).
+ */
+
 const ActivitySearchFiltersContext = createContext<ActivitySearchFiltersContextValue | undefined>(undefined);
 
 const ActivitySearchFiltersProvider = ({ children }: PropsWithChildren) => {
     const [selectedDay, setSelectedDay] = useState<SelectedDay | null>(null);
     const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
     const [selectedActivityTypes, setSelectedActivityTypes] = useState<string[]>([]);
-
+    
     const toggleSelectedLocation = (location: string) => {
         setSelectedLocations((currentLocations) =>
             currentLocations.includes(location)
-                ? currentLocations.filter((currentLocation) => currentLocation !== location)
-                : [...currentLocations, location],
+                ? currentLocations.filter((currentLocation) => currentLocation !== location) // Remove the location if it is already selected.
+                : [...currentLocations, location], // Add the location if it is not already selected.
         );
     };
 
     const clearSelectedLocations = () => {
-        setSelectedLocations([]);
+        setSelectedLocations([]); // Clear all selected locations   
     };
 
     const toggleSelectedActivityType = (activityType: string) => {
         setSelectedActivityTypes((currentActivityTypes) =>
             currentActivityTypes.includes(activityType)
-                ? currentActivityTypes.filter((currentActivityType) => currentActivityType !== activityType)
-                : [...currentActivityTypes, activityType],
+                ? currentActivityTypes.filter((currentActivityType) => currentActivityType !== activityType) // Remove the activity type if it is already selected.
+                : [...currentActivityTypes, activityType], // Add the activity type if it is not already selected.
         );
     };
 
     const clearSelectedActivityTypes = () => {
-        setSelectedActivityTypes([]);
+        setSelectedActivityTypes([]); // Clear all selected activity types
     };
 
     return (

@@ -16,9 +16,13 @@ type SearchResultsTileProps = {
     };
 };
 
+/**
+ * Component for displaying a single search result tile within the search results grid, using data from the activity schedule. Each tile includes a link to the booking page for the activity, unless the activity is fully booked, in which case it is displayed as a non-clickable tile with "inactive" styling applied.
+ */
+
 const SearchResultsTile = ({ activity }: SearchResultsTileProps) => {
-    const isFullyBooked = activity.spaces <= 0;;
-    const titleId = `search-results-tile-title-${activity.id}`;
+    const isFullyBooked = activity.spaces <= 0;
+    const titleId = `search-results-tile-title-${activity.id}`; // Create a unique ID for the title, used to set the title as the "aria-labelledby" attribute for the whole link.
     const tileContent = (
         <>
             <div className={styles["search-results-tile__details"]}>
